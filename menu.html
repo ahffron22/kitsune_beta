@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KITSUNE</title>
+    <!-- CSS -->
+    <link href="assets/css/reset.css" rel="reset" />
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <!-- Javascript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/actions.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-database.js"></script>
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gotu&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya:ital@1&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div id="headerContainer">
+        <header id="mainHeader">
+          <img src="assets/css/images/logo.jpg" id="logo" />
+          <h1 id="headerText">KITSUNE</h1>
+        </header>
+        <!-- Nav Bar -->
+        <ul class="nav justify-content-end">
+          <li class="nav-item" id="navItem">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+          <li class="nav-item" id="navItem">
+            <a class="nav-link" href="menu.html">Order Online</a>
+          </li>
+          <li class="nav-item" id="navItem">
+            <a class="nav-link" href="contact.html">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+      <header id="hr"></header>
+      <!-- Main Body -->
+      <div id="specialsBackground" class="col-lg-9">
+        <h2 id="specialsTitle">This Weeks Menu:</h2>
+        <header id="hr"></header>
+        <div class="media">
+          <article></article>
+        </div>
+      </div>
+      <div id="menuBackground" class="col-lg-9">
+        <div id="menuBody">
+          <form id="container">
+            <h2 id="menuTitle">Place Order</h2>
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Address*</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="1234 28th street, 80303"
+                id="emailInput"
+              />
+            </div>
+            <h3 id = "orderTitle">Your Order</h3>
+            <h3 id = "orderInstruction">Type in the name of the menu item you would like, followed by any substitutions, cooking notes, or add-ons.</h3>
+            <p id="orderTitle">(not all fields must be filled)</p>
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Item 1*</label>
+              <input
+                type="text"
+                placeholder="ex. Menu Item, sauce on the side"
+                class="form-control"
+                id="messageInput"
+              ></input>
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Item 2</label>
+              <input
+                type="text"
+                class="form-control"
+                id="item2Input"
+              ></input>
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Item 3</label>
+              <input
+                type="text"
+                class="form-control"
+                id="item3Input"
+              ></input>
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Item 4</label>
+              <input
+                type="text"               
+                class="form-control"
+                id="item4Input"
+              ></input>
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Item 5</label>
+              <input
+                type="text"
+                class="form-control"
+                id="item5Input"
+              ></input>
+            </div>
+            <button type="submit" id="submitBttn">Place Order</button>
+          </form>
+        </div>
+      </div>
+      <div class="mainFooter2 clearFix">
+        <footer class="page-footer font-small blue">
+          <div id="mainFooterText" class="footer-copyright text-center py-3">
+            <p>Chef/Owner: Marcus Eng</p>
+            <p>Chef/Director of Operations: Sam Soell</p>
+            <p>Web Design by: Alex Heffron</p>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

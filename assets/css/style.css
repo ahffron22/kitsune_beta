@@ -1,0 +1,226 @@
+/* font-family: "Gotu", sans-serif;
+font-family: "Raleway", sans-serif;
+font-family: "Marck Script", cursive;
+font-family: "Alegreya", serif; */
+body {
+  /* background-image: url("images/background18.jpg"); */
+  /* background-image: url("images/background12.jpg"); */
+  background-image: url("images/background13.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: "Gotu", sans-serif;
+}
+/* Header */
+#verticalLine {
+  width: 5px;
+  height: 750px;
+  position: relative;
+  right: 10px;
+  float: left;
+  border-right: 2px solid black;
+}
+#hr {
+  width: 100%;
+  border-bottom: 2px solid black;
+  margin: 25px auto 10px auto;
+  position: relative;
+}
+#headerContainer {
+  background-image: url("images/header.png");
+  background-attachment: fixed;
+  background-size: auto;
+  height: 165px;
+  font-family: "Gotu", sans-serif;
+  border: 1px solid slategray;
+  border-radius: 2px;
+}
+#logo {
+  width: 150px;
+  height: 150px;
+  border: 1px solid slategray;
+  border-radius: 2px;
+  position: absolute;
+  padding: 5px;
+}
+#headerText {
+  font-family: "Gotu", sans-serif;
+  font-size: 60px;
+  text-align: center;
+  margin: auto;
+  padding-top: 50px;
+}
+#navItem:hover {
+  background-color: darkred;
+  width: 130px;
+  height: 40px;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 20px;
+  color: white;
+}
+/* ------------------------------------------- */
+/* Bio */
+#bioBackground {
+  margin: 25px 75px 25px 15px;
+  width: 300px;
+  height: fit-content;
+  width: fit-content;
+}
+.sectionBackground {
+  background-image: url("images/header.png");
+  height: fit-content;
+  width: fit-content;
+  border: 1px solid slategray;
+  border-radius: 2px;
+  float: left;
+  padding: 40px;
+  margin-top: 25px;
+}
+
+p,
+h2,
+h1,
+h3,
+button,
+li,
+ul {
+  font-family: "Gotu", sans-serif;
+}
+/* ------------- */
+/* Specials */
+#specialsImg {
+  height: 125px;
+  width: 175px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.mainFooter {
+  background-image: url("images/header.png");
+  position: relative;
+  margin-top: 800px;
+  width: 100%;
+  height: 150px;
+  padding-top: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  text-align: center;
+  clear: both;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.mainFooter2 {
+  background-image: url("images/header.png");
+  position: relative;
+  margin-top: 400px;
+  width: 100%;
+  height: 150px;
+  padding-top: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  text-align: center;
+  clear: both;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+/* Menu */
+#menuTitle {
+  text-align: center;
+  font-size: 40px;
+}
+#specialsBackground {
+  background-image: url("images/header.png");
+  height: fit-content;
+  border: 1px solid slategray;
+  border-radius: 2px;
+  float: left;
+  padding: 40px;
+  margin: 25px auto auto 200px;
+}
+#menuBackground {
+  background-image: url("images/header.png");
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+  margin: 25px auto 25px 200px;
+  border: 1px solid black;
+  float: left;
+}
+#menuBody {
+  padding: 40px;
+}
+#menuItem {
+  margin: 50px;
+}
+#container {
+  background-image: url("images/header.png");
+  margin: 25px auto;
+  width: 1000px;
+  height: fit-content;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-family: "Montserrat", sans-serif;
+  color: black;
+  line-height: 40px;
+  letter-spacing: 1.5px;
+  padding: 20px;
+}
+#contactInfo {
+  margin-left: 50px;
+  font-size: 20px;
+}
+#profileImage {
+  height: 200px;
+  width: 200px;
+  float: left;
+  margin: 20px;
+  border: 1px solid black;
+}
+#submitBttn {
+  width: 100px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+#hiddenLink {
+  position: fixed;
+  bottom: 115px;
+  left: 5px;
+  height: 50px;
+  width: 50px;
+}
+#hiddenInputDiv,
+#hiddenInputDiv2 {
+  margin: 20px auto;
+}
+#menuInput {
+  width: 500px;
+  height: 30px;
+}
+#menuInput2 {
+  width: 500px;
+  height: 100px;
+}
+#specialsTitle {
+  margin: 15px auto 15px 25px;
+}
+#specialsDescription {
+  margin: 15px auto 15px 25px;
+}
+#messageCenter {
+  background-image: url("images/header.png");
+  height: fit-content;
+  width: 75%;
+  padding: 30px;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 15px 20px 25px rgb(90, 11, 27);
+  margin: auto;
+}
+#orderTitle {
+  text-align: center;
+}
+#orderInstruction {
+  text-align: center;
+  font-size: 18px;
+}
