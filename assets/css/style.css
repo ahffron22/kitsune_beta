@@ -277,6 +277,7 @@ ul {
   .mainFooter2 {
     position: relative;
     margin-top: 100px;
+    height: fit-content;
   }
   #hiddenLink {
     background-color: black;
