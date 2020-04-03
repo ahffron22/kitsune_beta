@@ -234,6 +234,7 @@ ul {
   }
   #headerText {
     margin-left: 125px;
+    font-size: 25px;
   }
   .sectionBackground {
     margin-bottom: 25px;
@@ -250,6 +251,11 @@ ul {
   }
   #container {
     width: inherit;
+  }
+  #logo {
+    width: 75px;
+    height: 75px;
+    margin: 0px;
   }
   #navItem {
     margin-right: -10px;
