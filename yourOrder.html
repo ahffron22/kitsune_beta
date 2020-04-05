@@ -84,40 +84,50 @@
       </div>
       <header id="hr"></header>
       <div id="container">
-        <div class="media">
-          <img
-            src="assets/css/images/logo.jpg"
-            class="mr-3"
-            alt=""
-            id="profileImage"
-          />
-          <div class="media-body" id="mainBodyContent">
-            <h5 class="mt-0" id="contactInfo">Email:</h5>
-            <p id="contactInfo">ssoell@escoffier.edu</p>
+        <div id="cartContainer">
+          <h2 id="menuTitle">Your Cart</h2>
+          <hr />
+          <div class="form-group" id="emailContainer">
+            <label for="exampleFormControlInput1">Address*</label>
+            <textarea
+              type="text"
+              class="form-control"
+              placeholder="1234 28th street, 80303"
+              id="emailInput"
+            ></textarea>
+            <button id="addAddress">Add Address</button>
+          </div>
+          <div id="cart">
+            <h3>Your Address: <a id="email"></a></h3>
+            <h3>Your Order:</h3>
+            <p class="menuItem" id="item1"></p>
+            <button class="removeBttn" id="remove1">
+              Remove
+            </button>
             <hr />
-            <h5 class="mt-0" id="contactInfo">Phone:</h5>
-            <p id="contactInfo">***-***-****</p>
+            <p class="menuItem" id="item2"></p>
+            <button class="removeBttn" id="remove2">
+              Remove
+            </button>
             <hr />
-            <h5 class="mt-0" id="contactInfo">Location:</h5>
-            <p id="contactInfo">Boulder, CO</p>
+            <p class="menuItem" id="item3"></p>
+            <button class="removeBttn" id="remove3">
+              Remove
+            </button>
             <hr />
-            <h5 class="mt-0" id="contactInfo">***</h5>
-            <p id="contactInfo">
-              <a>*****</a>
-            </p>
+            <p class="menuItem" id="item4"></p>
+            <button class="removeBttn" id="remove4">
+              Remove
+            </button>
+            <hr />
+            <p class="menuItem" id="item5"></p>
+            <button class="removeBttn" id="remove5">
+              Remove
+            </button>
             <hr />
           </div>
+          <button id="submitOrder" type="submit">Place Order</button>
         </div>
-      </div>
-      <a href="hidden.html"><aside id="hiddenLink"></aside></a>
-      <div class="mainFooter2 clearFix">
-        <footer class="page-footer font-small blue">
-          <div id="mainFooterText" class="footer-copyright text-center py-3">
-            <p>Chef/Owner: Marcus Eng</p>
-            <p>Chef/Director of Operations: Sam Soell</p>
-            <p>Web Design by: Alex Heffron</p>
-          </div>
-        </footer>
       </div>
     </div>
   </body>

@@ -13,6 +13,10 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <!-- Javascript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/javascript/actions.js"></script>
@@ -70,6 +74,12 @@
           <li class="nav-item" id="navItem">
             <a class="nav-link" href="contact.html">Contact Us</a>
           </li>
+          <li class="nav-item" id="navItem">
+            <a class="nav-link" href="yourOrder.html"
+              ><i class="fa fa-shopping-cart" style="font-size: 24px;"></i>
+              Cart</a
+            >
+          </li>
         </ul>
       </div>
       <header id="hr"></header>
@@ -85,60 +95,59 @@
         <div id="menuBody">
           <form id="container">
             <h2 id="menuTitle">Place Order</h2>
-            <div class="form-group">
-              <label for="exampleFormControlInput1">Address*</label>
-              <input
-                type="text"
-                class="form-control"
-                placeholder="1234 28th street, 80303"
-                id="emailInput"
-              />
-            </div>
-            <h3 id = "orderTitle">Your Order</h3>
-            <h3 id = "orderInstruction">Type in the name of the menu item you would like, followed by any substitutions, cooking notes, or add-ons.</h3>
-            <p id="orderTitle">(not all fields must be filled)</p>
+            <hr />
+
+            <h3 id="orderInstruction">
+              Type in the name of the menu item you would like, followed by any
+              substitutions, cooking notes, or add-ons.
+            </h3>
+            <p id="orderInstruction">(not all fields must be filled)</p>
+
             <div class="form-group">
               <label for="exampleFormControlTextarea1">Item 1*</label>
-              <input
+              <textarea
                 type="text"
                 placeholder="ex. Menu Item, sauce on the side"
-                class="form-control"
+                class="form-control itemInput"
                 id="messageInput"
-              ></input>
+              ></textarea>
             </div>
             <div class="form-group">
               <label for="exampleFormControlTextarea1">Item 2</label>
-              <input
+              <textarea
                 type="text"
-                class="form-control"
+                class="form-control itemInput"
                 id="item2Input"
-              ></input>
+              ></textarea>
             </div>
             <div class="form-group">
               <label for="exampleFormControlTextarea1">Item 3</label>
-              <input
+              <textarea
                 type="text"
-                class="form-control"
+                class="form-control itemInput"
                 id="item3Input"
-              ></input>
+              ></textarea>
             </div>
             <div class="form-group">
               <label for="exampleFormControlTextarea1">Item 4</label>
-              <input
-                type="text"               
-                class="form-control"
+              <textarea
+                type="text"
+                class="form-control itemInput"
                 id="item4Input"
-              ></input>
+              ></textarea>
             </div>
             <div class="form-group">
               <label for="exampleFormControlTextarea1">Item 5</label>
-              <input
+              <textarea
                 type="text"
-                class="form-control"
+                class="form-control itemInput"
                 id="item5Input"
-              ></input>
+              ></textarea>
             </div>
-            <button type="submit" id="submitBttn">Place Order</button>
+
+            <button type="submit" id="submitBttn">
+              Add to cart
+            </button>
           </form>
         </div>
       </div>
@@ -146,6 +155,7 @@
         <footer class="page-footer font-small blue">
           <div id="mainFooterText" class="footer-copyright text-center py-3">
             <p>Chef/Owner: Marcus Eng</p>
+
             <p>Chef/Director of Operations: Sam Soell</p>
             <p>Web Design by: Alex Heffron</p>
           </div>
