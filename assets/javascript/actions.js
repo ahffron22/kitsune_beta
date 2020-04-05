@@ -13,6 +13,7 @@ $(document).ready(function () {
     var menuInput2 = $(
       "<textarea id='menuInput2' placeholder='Item Description' rows = '3'>"
     );
+    var priceInput = $("<input id='priceInput' placeholder='Item Price'>");
     var submit = $("<button id='submitBttn'>Add Item</button>");
     var failWarning = "failed to load page";
     if (password === "123456") {
@@ -21,6 +22,7 @@ $(document).ready(function () {
       $("#messageLink").append(messageCenterLink);
       $("#hiddenInputDiv").append(menuInput);
       $("#hiddenInputDiv2").append(menuInput2);
+      $("#priceInputDiv").append(priceInput);
       $("#hiddenSubmit").append(submit);
       $("#addItem").append(addItemTitle);
       $("#returnHome").append(returnLink);
@@ -45,13 +47,16 @@ $(document).ready(function () {
   var database = firebase.database();
   var itemTitle = "";
   var itemDescription = "";
+  var itemPrice = "";
   $("#hiddenSubmit").on("click", function (event) {
     event.preventDefault();
     (itemTitle = $(menuInput).val().trim()),
-      (itemDescription = $(menuInput2).val().trim());
+      (itemDescription = $(menuInput2).val().trim()),
+      (itemPrice = $(priceInput).val().trim());
     database.ref().push({
       itemTitle: itemTitle,
       itemDescription: itemDescription,
+      itemPrice: itemPrice,
     });
     alert("Item Added!");
   });
@@ -62,7 +67,8 @@ $(document).ready(function () {
         $("<h3 id = 'specialsTitle'>").text(childSnapshot.val().itemTitle),
         $("<p id = 'specialsDescription'>").text(
           childSnapshot.val().itemDescription
-        )
+        ),
+        $("<p id = 'price'>").text(childSnapshot.val().itemPrice)
       );
       $("article").append(menuItem);
     },
@@ -174,4 +180,9 @@ $(document).ready(function () {
     $("#item5").remove();
     sessionStorage.setItem("orderItem5", empty);
   });
+  var menuItem = $(".menuItem").text();
+  var price1 = "     $12.00";
+  var price2 = "     $15.00";
+  var price3 = "     $18.99";
+  var price4 = "     $21.50";
 });

@@ -3,7 +3,7 @@ font-family: "Raleway", sans-serif;
 font-family: "Marck Script", cursive;
 font-family: "Alegreya", serif; */
 body {
-  background-image: url("images/background13.jpg");
+  background-image: url("images/food_background.jpg");
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
@@ -51,10 +51,6 @@ body {
 }
 #navItem:hover {
   background-color: darkred;
-<<<<<<< HEAD
-=======
-  height: 40px;
->>>>>>> 3752522af51d89562c11f28d1360921fb205719c
   text-align: center;
   border: 1px solid black;
   border-radius: 20px;
@@ -211,6 +207,9 @@ label {
 #specialsDescription {
   margin: 15px auto 15px 25px;
 }
+#price {
+  margin: 15px auto 15px 25px;
+}
 #messageCenter {
   background-image: url("images/header.png");
   height: fit-content;
@@ -256,6 +255,15 @@ label {
   border: 1px solid black;
   border-radius: 5px;
   font-family: "Gotu", sans-serif;
+}
+#total {
+  background-color: lightgrey;
+  width: 150px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-family: "Gotu", sans-serif;
+  margin-left: 15px;
+  margin-right: 25px;
 }
 /* --------- */
 /* Resposivness */
