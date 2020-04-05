@@ -51,6 +51,10 @@ body {
 }
 #navItem:hover {
   background-color: darkred;
+<<<<<<< HEAD
+=======
+  height: 40px;
+>>>>>>> 3752522af51d89562c11f28d1360921fb205719c
   text-align: center;
   border: 1px solid black;
   border-radius: 20px;
