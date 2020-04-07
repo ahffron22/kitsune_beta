@@ -403,13 +403,16 @@ h4 {
   }
   #contactInfo {
     width: inherit;
-    margin-left: -5px;
+    margin-left: 0px;
     margin-bottom: 0px;
+    font-size: 14px;
+    padding: 0px;
   }
   #profileImage {
     width: 150px;
     height: 150px;
     margin-left: 0px;
+    padding: 0px;
   }
   .mainFooter2 {
     position: relative;
@@ -423,6 +426,15 @@ h4 {
     width: 30px;
     height: 30px;
     z-index: 100;
+  }
+  .crys {
+    width: 125px;
+    height: 125px;
+  }
+  .partnersBackground {
+    width: inherit;
+    position: relative;
+    right: 180px;
   }
 }
 @media (max-width: 850px) {
