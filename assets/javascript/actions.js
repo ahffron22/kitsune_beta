@@ -79,70 +79,49 @@ $(document).ready(function () {
   //   --------------------------------
   // Order center
   var email = "";
-  var message = "";
-  var orderItem2 = "";
-  var orderItem3 = "";
-  var orderItem4 = "";
-  var orderItem5 = "";
+  var boxCount1 = "";
+  var boxCount2 = "";
+  var boxCount3 = "";
+  var boxCount4 = "";
+  var boxCount5 = "";
+  var date = "";
   var itemInput = $(".itemInput").text();
 
   $("#submitOrder").on("click", function (event) {
     event.preventDefault();
-
     (email = $("#email").text()),
-      (message = $("#item1").text()),
-      (orderItem2 = $("#item2").text()),
-      (orderItem3 = $("#item3").text()),
-      (orderItem4 = $("#item4").text()),
-      (orderItem5 = $("#item5").text());
+      (boxCount1 = $(".boxCount1").text()),
+      (boxCount2 = $(".boxCount2").text()),
+      (boxCount3 = $(".boxCount3").text()),
+      (boxCount4 = $(".boxCount4").text()),
+      (boxCount5 = $(".boxCount5").text()),
+      (date = Date());
     database.ref().push({
-      email: email,
-      message: message,
-      orderItem2: orderItem2,
-      orderItem3: orderItem3,
-      orderItem4: orderItem4,
-      orderItem5: orderItem5,
+      address: email,
+      boxCount1: boxCount1,
+      boxCount2: boxCount2,
+      boxCount3: boxCount3,
+      boxCount4: boxCount4,
+      boxCount5: boxCount5,
+      date: date,
     });
+    console.log(date);
     alert("Order Submitted");
   });
   database.ref().on("child_added", function (childSnapshot) {
     var userMessage = $("<div>").append(
       $("<hr />"),
-      $("<h3>").text(childSnapshot.val().email),
-      $("<p>").text(childSnapshot.val().message),
-      $("<p>").text(childSnapshot.val().orderItem2),
-      $("<p>").text(childSnapshot.val().orderItem3),
-      $("<p>").text(childSnapshot.val().orderItem4),
-      $("<p>").text(childSnapshot.val().orderItem5)
+      $("<h3>").text(childSnapshot.val().address),
+      $("<p>").text(childSnapshot.val().boxCount1),
+      $("<p>").text(childSnapshot.val().boxCount2),
+      $("<p>").text(childSnapshot.val().boxCount3),
+      $("<p>").text(childSnapshot.val().boxCount4),
+      $("<p>").text(childSnapshot.val().boxCount5),
+      $("<p>").text(childSnapshot.val().date)
     );
+
     $("#messageCenter").append(userMessage);
   });
-  // $("#submitBttn").on("click", function (event) {
-  //   event.preventDefault();
-  //   message = $("#messageInput").val().trim();
-  //   orderItem2 = $("#item2Input").val().trim();
-  //   orderItem3 = $("#item3Input").val().trim();
-  //   orderItem4 = $("#item4Input").val().trim();
-  //   orderItem5 = $("#item5Input").val().trim();
-  //   console.log(message);
-  //   console.log(orderItem2);
-  //   console.log(orderItem3);
-  //   console.log(orderItem4);
-  //   console.log(orderItem5);
-  //   // sessionStorage.clear();
-  //   sessionStorage.setItem("message", message);
-  //   sessionStorage.setItem("orderItem2", orderItem2);
-  //   sessionStorage.setItem("orderItem3", orderItem3);
-  //   sessionStorage.setItem("orderItem4", orderItem4);
-  //   sessionStorage.setItem("orderItem5", orderItem5);
-  //   alert("Added to cart!");
-  // });
-
-  // $("#item1").text(sessionStorage.getItem("message"));
-  // $("#item2").text(sessionStorage.getItem("orderItem2"));
-  // $("#item3").text(sessionStorage.getItem("orderItem3"));
-  // $("#item4").text(sessionStorage.getItem("orderItem4"));
-  // $("#item5").text(sessionStorage.getItem("orderItem5"));
 
   $("#addAddress").on("click", function (event) {
     event.preventDefault();
@@ -156,50 +135,70 @@ $(document).ready(function () {
   // remove item buttons
   var empty = "";
   $("#remove1").on("click", function () {
-    $("#item1").remove();
+    var removeBox = sessionStorage.getItem("box1Count");
+    removeBox -= 1;
+    sessionStorage.setItem("box1Count", removeBox);
     var subtractPrice = sessionStorage.getItem("total");
     var newTotal = subtractPrice - crys1;
     sessionStorage.setItem("total", newTotal);
-    sessionStorage.setItem("crys1", empty);
-
     alert("Item Removed!");
     reloadPage();
+    if (removeBox === 0) {
+      sessionStorage.setItem("crys1", empty);
+    }
   });
   $("#remove2").on("click", function (event) {
     event.preventDefault();
-    $("#item2").remove();
+    var removeBox = sessionStorage.getItem("box2Count");
+    removeBox -= 1;
+    sessionStorage.setItem("box2Count", removeBox);
     var subtractPrice = sessionStorage.getItem("total");
     var newTotal = subtractPrice - crys2;
     sessionStorage.setItem("total", newTotal);
-    sessionStorage.setItem("crys2", empty);
+
     reloadPage();
+    if (removeBox === 0) {
+      sessionStorage.setItem("crys2", empty);
+    }
   });
   $("#remove3").on("click", function (event) {
     event.preventDefault();
-    $("#item3").remove();
+    var removeBox = sessionStorage.getItem("box3Count");
+    removeBox -= 1;
+    sessionStorage.setItem("box3Count", removeBox);
     var subtractPrice = sessionStorage.getItem("total");
     var newTotal = subtractPrice - crys3;
     sessionStorage.setItem("total", newTotal);
-    sessionStorage.setItem("crys3", empty);
     reloadPage();
+    if (removeBox === 0) {
+      sessionStorage.setItem("crys3", empty);
+    }
   });
   $("#remove4").on("click", function (event) {
     event.preventDefault();
-    $("#item4").remove();
+    var removeBox = sessionStorage.getItem("box4Count");
+    removeBox -= 1;
+    sessionStorage.setItem("box4Count", removeBox);
     var subtractPrice = sessionStorage.getItem("total");
     var newTotal = subtractPrice - crys4;
     sessionStorage.setItem("total", newTotal);
-    sessionStorage.setItem("crys4", empty);
     reloadPage();
+    if (removeBox === 0) {
+      sessionStorage.setItem("crys4", empty);
+    }
   });
   $("#remove5").on("click", function (event) {
     event.preventDefault();
-    $("#item5").remove();
+    var removeBox = sessionStorage.getItem("box5Count");
+    removeBox -= 1;
+    sessionStorage.setItem("box5Count", removeBox);
     var subtractPrice = sessionStorage.getItem("total");
     var newTotal = subtractPrice - crys5;
     sessionStorage.setItem("total", newTotal);
-    sessionStorage.setItem("crys5", empty);
     reloadPage();
+    if (removeBox === 0) {
+      sessionStorage.setItem("crys5", empty);
+    }
   });
   function reloadPage() {
     location.reload(true);
@@ -211,21 +210,24 @@ $(document).ready(function () {
   var crys5 = 23.0;
   var crys6 = 14.0;
   var userScore = 0;
-  var box1 = "Box 1";
-  var box2 = "Box 2";
-  var box3 = "Box 3";
-  var box4 = "Box 4";
-  var box5 = "Box 5";
-  var box6 = "Box 6";
+  var box1Count = 0;
+  var box2Count = 0;
+  var box3Count = 0;
+  var box4Count = 0;
+  var box5Count = 0;
   $(".crystal1").on("click", function () {
     userScore = userScore + parseFloat($(this).attr("value"));
+    box1Count += 1;
+    sessionStorage.setItem("box1Count", box1Count);
     sessionStorage.setItem("crys1", crys1);
     sessionStorage.setItem("total", userScore);
-    $("#menuItem").append(sessionStorage.getItem("crys1"));
     alert("Added to cart!");
+    console.log(box1Count);
   });
   $(".crystal2").on("click", function () {
     userScore = userScore + parseFloat($(this).attr("value"));
+    box2Count += 1;
+    sessionStorage.setItem("box2Count", box2Count);
     sessionStorage.setItem("crys2", crys2);
     sessionStorage.setItem("total", userScore);
     $("#menuItem").append(sessionStorage.getItem("crys2"));
@@ -233,6 +235,8 @@ $(document).ready(function () {
   });
   $(".crystal3").on("click", function () {
     userScore = userScore + parseFloat($(this).attr("value"));
+    box3Count += 1;
+    sessionStorage.setItem("box3Count", box3Count);
     sessionStorage.setItem("crys3", crys3);
     sessionStorage.setItem("total", userScore);
     $("#menuItem").append(sessionStorage.getItem("crys3"));
@@ -240,6 +244,8 @@ $(document).ready(function () {
   });
   $(".crystal4").on("click", function () {
     userScore = userScore + parseFloat($(this).attr("value"));
+    box4Count += 1;
+    sessionStorage.setItem("box4Count", box4Count);
     sessionStorage.setItem("crys4", crys4);
     sessionStorage.setItem("total", userScore);
     $("#menuItem").append(sessionStorage.getItem("crys4"));
@@ -247,6 +253,8 @@ $(document).ready(function () {
   });
   $(".crystal5").on("click", function () {
     userScore = userScore + parseFloat($(this).attr("value"));
+    box5Count += 1;
+    sessionStorage.setItem("box5Count", box5Count);
     sessionStorage.setItem("crys5", crys5);
     sessionStorage.setItem("total", userScore);
     $("#menuItem").append(sessionStorage.getItem("crys5"));
@@ -254,19 +262,20 @@ $(document).ready(function () {
   });
   $(".crystal6").on("click", function () {
     userScore = userScore + parseFloat($(this).attr("value"));
+    box6Count += 1;
+    sessionStorage.setItem("box6Count", box6Count);
     sessionStorage.setItem("crys6", crys6);
     sessionStorage.setItem("total", userScore);
     $("#menuItem").append(sessionStorage.getItem("crys6"));
     alert("Added to cart!");
   });
-
   function crystalValue() {
-    $(".crystal1").attr("value", crys1, box1);
-    $(".crystal2").attr("value", crys2, box2);
-    $(".crystal3").attr("value", crys3, box3);
-    $(".crystal4").attr("value", crys4, box4);
-    $(".crystal5").attr("value", crys5, box5);
-    $(".crystal6").attr("value", crys6, box6);
+    $(".crystal1").attr("value", crys1);
+    $(".crystal2").attr("value", crys2);
+    $(".crystal3").attr("value", crys3);
+    $(".crystal4").attr("value", crys4);
+    $(".crystal5").attr("value", crys5);
+    $(".crystal6").attr("value", crys6);
     $(".userScore").text(userScore);
   }
   $("#clearTotal").on("click", function () {
@@ -284,10 +293,15 @@ $(document).ready(function () {
   console.log(tax);
   console.log(subTotal);
   $("#total").append(taxTotal);
+  $("#box1Count").append(sessionStorage.getItem("box1Count") + "x");
   $("#item1").append(sessionStorage.getItem("crys1"));
+  $("#box2Count").append(sessionStorage.getItem("box2Count") + "x");
   $("#item2").append(sessionStorage.getItem("crys2"));
+  $("#box3Count").append(sessionStorage.getItem("box3Count") + "x");
   $("#item3").append(sessionStorage.getItem("crys3"));
+  $("#box4Count").append(sessionStorage.getItem("box4Count") + "x");
   $("#item4").append(sessionStorage.getItem("crys4"));
+  $("#box5Count").append(sessionStorage.getItem("box5Count") + "x");
   $("#item5").append(sessionStorage.getItem("crys5"));
   $("#tax").append(tax);
 });
