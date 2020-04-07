@@ -81,7 +81,8 @@ h3,
 button,
 li,
 ul,
-label {
+label,
+h4 {
   font-family: "Gotu", sans-serif;
 }
 /* ------------- */
@@ -121,6 +122,28 @@ label {
   border-radius: 5px;
 }
 /* Menu */
+.clearfix::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+.crys {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  border: 2px solid #022b3a;
+  border-radius: 20px;
+}
+#imageBox {
+  float: left;
+  margin: 45px;
+  border-radius: 20px;
+}
+#imageBox:hover {
+  background-color: darkgray;
+  cursor: pointer;
+  box-shadow: 5px 10px 15px black;
+}
 #menuTitle {
   text-align: center;
   font-size: 40px;
@@ -257,13 +280,14 @@ label {
   font-family: "Gotu", sans-serif;
 }
 #total {
-  background-color: lightgrey;
   width: 150px;
-  border: 1px solid black;
-  border-radius: 5px;
+
   font-family: "Gotu", sans-serif;
   margin-left: 15px;
   margin-right: 25px;
+}
+#imageTitle {
+  text-align: center;
 }
 /* --------- */
 /* Resposivness */

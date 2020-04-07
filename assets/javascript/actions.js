@@ -117,32 +117,32 @@ $(document).ready(function () {
     );
     $("#messageCenter").append(userMessage);
   });
-  $("#submitBttn").on("click", function (event) {
-    event.preventDefault();
-    message = $("#messageInput").val().trim();
-    orderItem2 = $("#item2Input").val().trim();
-    orderItem3 = $("#item3Input").val().trim();
-    orderItem4 = $("#item4Input").val().trim();
-    orderItem5 = $("#item5Input").val().trim();
-    console.log(message);
-    console.log(orderItem2);
-    console.log(orderItem3);
-    console.log(orderItem4);
-    console.log(orderItem5);
-    // sessionStorage.clear();
-    sessionStorage.setItem("message", message);
-    sessionStorage.setItem("orderItem2", orderItem2);
-    sessionStorage.setItem("orderItem3", orderItem3);
-    sessionStorage.setItem("orderItem4", orderItem4);
-    sessionStorage.setItem("orderItem5", orderItem5);
-    alert("Added to cart!");
-  });
+  // $("#submitBttn").on("click", function (event) {
+  //   event.preventDefault();
+  //   message = $("#messageInput").val().trim();
+  //   orderItem2 = $("#item2Input").val().trim();
+  //   orderItem3 = $("#item3Input").val().trim();
+  //   orderItem4 = $("#item4Input").val().trim();
+  //   orderItem5 = $("#item5Input").val().trim();
+  //   console.log(message);
+  //   console.log(orderItem2);
+  //   console.log(orderItem3);
+  //   console.log(orderItem4);
+  //   console.log(orderItem5);
+  //   // sessionStorage.clear();
+  //   sessionStorage.setItem("message", message);
+  //   sessionStorage.setItem("orderItem2", orderItem2);
+  //   sessionStorage.setItem("orderItem3", orderItem3);
+  //   sessionStorage.setItem("orderItem4", orderItem4);
+  //   sessionStorage.setItem("orderItem5", orderItem5);
+  //   alert("Added to cart!");
+  // });
 
-  $("#item1").text(sessionStorage.getItem("message"));
-  $("#item2").text(sessionStorage.getItem("orderItem2"));
-  $("#item3").text(sessionStorage.getItem("orderItem3"));
-  $("#item4").text(sessionStorage.getItem("orderItem4"));
-  $("#item5").text(sessionStorage.getItem("orderItem5"));
+  // $("#item1").text(sessionStorage.getItem("message"));
+  // $("#item2").text(sessionStorage.getItem("orderItem2"));
+  // $("#item3").text(sessionStorage.getItem("orderItem3"));
+  // $("#item4").text(sessionStorage.getItem("orderItem4"));
+  // $("#item5").text(sessionStorage.getItem("orderItem5"));
 
   $("#addAddress").on("click", function (event) {
     event.preventDefault();
@@ -155,34 +155,139 @@ $(document).ready(function () {
 
   // remove item buttons
   var empty = "";
-  $("#remove1").on("click", function (event) {
-    event.preventDefault();
+  $("#remove1").on("click", function () {
     $("#item1").remove();
-    sessionStorage.setItem("message", empty);
+    var subtractPrice = sessionStorage.getItem("total");
+    var newTotal = subtractPrice - crys1;
+    sessionStorage.setItem("total", newTotal);
+    sessionStorage.setItem("crys1", empty);
+
+    alert("Item Removed!");
+    reloadPage();
   });
   $("#remove2").on("click", function (event) {
     event.preventDefault();
     $("#item2").remove();
-    sessionStorage.setItem("orderItem2", empty);
+    var subtractPrice = sessionStorage.getItem("total");
+    var newTotal = subtractPrice - crys2;
+    sessionStorage.setItem("total", newTotal);
+    sessionStorage.setItem("crys2", empty);
+    reloadPage();
   });
   $("#remove3").on("click", function (event) {
     event.preventDefault();
     $("#item3").remove();
-    sessionStorage.setItem("orderItem3", empty);
+    var subtractPrice = sessionStorage.getItem("total");
+    var newTotal = subtractPrice - crys3;
+    sessionStorage.setItem("total", newTotal);
+    sessionStorage.setItem("crys3", empty);
+    reloadPage();
   });
   $("#remove4").on("click", function (event) {
     event.preventDefault();
     $("#item4").remove();
-    sessionStorage.setItem("orderItem4", empty);
+    var subtractPrice = sessionStorage.getItem("total");
+    var newTotal = subtractPrice - crys4;
+    sessionStorage.setItem("total", newTotal);
+    sessionStorage.setItem("crys4", empty);
+    reloadPage();
   });
   $("#remove5").on("click", function (event) {
     event.preventDefault();
     $("#item5").remove();
-    sessionStorage.setItem("orderItem5", empty);
+    var subtractPrice = sessionStorage.getItem("total");
+    var newTotal = subtractPrice - crys5;
+    sessionStorage.setItem("total", newTotal);
+    sessionStorage.setItem("crys5", empty);
+    reloadPage();
   });
-  var menuItem = $(".menuItem").text();
-  var price1 = "     $12.00";
-  var price2 = "     $15.00";
-  var price3 = "     $18.99";
-  var price4 = "     $21.50";
+  function reloadPage() {
+    location.reload(true);
+  }
+  var crys1 = 15.0;
+  var crys2 = 16.0;
+  var crys3 = 18.0;
+  var crys4 = 20.0;
+  var crys5 = 23.0;
+  var crys6 = 14.0;
+  var userScore = 0;
+  var box1 = "Box 1";
+  var box2 = "Box 2";
+  var box3 = "Box 3";
+  var box4 = "Box 4";
+  var box5 = "Box 5";
+  var box6 = "Box 6";
+  $(".crystal1").on("click", function () {
+    userScore = userScore + parseFloat($(this).attr("value"));
+    sessionStorage.setItem("crys1", crys1);
+    sessionStorage.setItem("total", userScore);
+    $("#menuItem").append(sessionStorage.getItem("crys1"));
+    alert("Added to cart!");
+  });
+  $(".crystal2").on("click", function () {
+    userScore = userScore + parseFloat($(this).attr("value"));
+    sessionStorage.setItem("crys2", crys2);
+    sessionStorage.setItem("total", userScore);
+    $("#menuItem").append(sessionStorage.getItem("crys2"));
+    alert("Added to cart!");
+  });
+  $(".crystal3").on("click", function () {
+    userScore = userScore + parseFloat($(this).attr("value"));
+    sessionStorage.setItem("crys3", crys3);
+    sessionStorage.setItem("total", userScore);
+    $("#menuItem").append(sessionStorage.getItem("crys3"));
+    alert("Added to cart!");
+  });
+  $(".crystal4").on("click", function () {
+    userScore = userScore + parseFloat($(this).attr("value"));
+    sessionStorage.setItem("crys4", crys4);
+    sessionStorage.setItem("total", userScore);
+    $("#menuItem").append(sessionStorage.getItem("crys4"));
+    alert("Added to cart!");
+  });
+  $(".crystal5").on("click", function () {
+    userScore = userScore + parseFloat($(this).attr("value"));
+    sessionStorage.setItem("crys5", crys5);
+    sessionStorage.setItem("total", userScore);
+    $("#menuItem").append(sessionStorage.getItem("crys5"));
+    alert("Added to cart!");
+  });
+  $(".crystal6").on("click", function () {
+    userScore = userScore + parseFloat($(this).attr("value"));
+    sessionStorage.setItem("crys6", crys6);
+    sessionStorage.setItem("total", userScore);
+    $("#menuItem").append(sessionStorage.getItem("crys6"));
+    alert("Added to cart!");
+  });
+
+  function crystalValue() {
+    $(".crystal1").attr("value", crys1, box1);
+    $(".crystal2").attr("value", crys2, box2);
+    $(".crystal3").attr("value", crys3, box3);
+    $(".crystal4").attr("value", crys4, box4);
+    $(".crystal5").attr("value", crys5, box5);
+    $(".crystal6").attr("value", crys6, box6);
+    $(".userScore").text(userScore);
+  }
+  $("#clearTotal").on("click", function () {
+    sessionStorage.clear();
+    $("#total").text("0");
+    $("#tax").text("0");
+    $(".userScore").text("0");
+    reloadPage();
+  });
+  crystalValue();
+  $(".userScore").text(sessionStorage.getItem("total"));
+  var subTotal = parseFloat(sessionStorage.getItem("total"));
+  var tax = parseFloat(sessionStorage.getItem("total") * 0.1);
+  var taxTotal = subTotal + tax;
+  console.log(tax);
+  console.log(subTotal);
+  $("#total").append(taxTotal);
+  $("#item1").append(sessionStorage.getItem("crys1"));
+  $("#item2").append(sessionStorage.getItem("crys2"));
+  $("#item3").append(sessionStorage.getItem("crys3"));
+  $("#item4").append(sessionStorage.getItem("crys4"));
+  $("#item5").append(sessionStorage.getItem("crys5"));
+  $("#tax").append(tax);
 });

@@ -100,33 +100,50 @@
           <div id="cart">
             <h3>Your Address: <a id="email"></a></h3>
             <h3>Your Order:</h3>
-            <p class="menuItem" id="item1"></p>
+            <h4>Box 1:</h4>
+            <p class="menuItem">$<span id="item1" class="menuItem"></span></p>
             <button class="removeBttn" id="remove1">
               Remove
             </button>
             <hr />
-            <p class="menuItem" id="item2"></p>
+            <h4>Box 2:</h4>
+            <p class="menuItem">$<span id="item2" class="menuItem"></span></p>
+
             <button class="removeBttn" id="remove2">
               Remove
             </button>
             <hr />
-            <p class="menuItem" id="item3"></p>
+            <h4>Box 3:</h4>
+            <p class="menuItem">$<span id="item3" class="menuItem"></span></p>
+
             <button class="removeBttn" id="remove3">
               Remove
             </button>
             <hr />
-            <p class="menuItem" id="item4"></p>
+            <h4>Box 4:</h4>
+            <p class="menuItem">$<span id="item4" class="menuItem"></span></p>
+
             <button class="removeBttn" id="remove4">
               Remove
             </button>
             <hr />
-            <p class="menuItem" id="item5"></p>
+            <h4>Box 5:</h4>
+            <p class="menuItem">$<span id="item5" class="menuItem"></span></p>
+
             <button class="removeBttn" id="remove5">
               Remove
             </button>
             <hr />
           </div>
-          <button id="total">Total</button>
+          <div class="scoreboard">
+            <h2 class="yourScore">
+              Order total: $<span class="userScore">0</span>.00
+            </h2>
+            <h3>tax: $<span id="tax"></span></h3>
+            <span id="smallLine"></span>
+            <h2>$<span id="total"></span></h2>
+          </div>
+          <button id="clearTotal" type="submit">Clear Total</button>
           <button id="submitOrder" type="submit">Place Order</button>
         </div>
       </div>
