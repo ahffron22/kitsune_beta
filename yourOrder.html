@@ -36,8 +36,8 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-app.js"></script>
-
     <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-database.js"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=AWGRzXqzVyIMBV0SDeBnQ2aKm-CuBLU8gcPF8gA-JEXHXyQNHG3vWVTNBjhEXy7hR1jzQl7xoVgWMeAC&currency=USD" data-sdk-integration-source="button-factory"></script>
     <!-- Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Gotu&display=swap"
@@ -99,7 +99,7 @@
               id="emailInput"
             ></textarea>
             <button id="addAddress">Add Address</button>
-            <h3>Your Address: <a id="email"></a></h3>
+            <h3>Delivery Address: <a id="email"></a></h3>
           </div>
           <h3>Your Order:</h3>
           <div id="cart">
@@ -146,7 +146,10 @@
             <h3>tax: $<span id="tax"></span></h3>
             <span id="smallLine"></span>
             <h2>$<span id="total"></span></h2>
-          </div>
+            <div id="paypal-button-container"></div>
+
+        
+            
           <button id="clearTotal" type="submit">Clear Total</button>
           <button id="submitOrder" type="submit">Place Order</button>
         </div>
