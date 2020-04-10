@@ -1,14 +1,14 @@
-/* font-family: "Gotu", sans-serif;
-font-family: "Raleway", sans-serif;
-font-family: "Marck Script", cursive;
-font-family: "Alegreya", serif; */
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Montserrat', sans-serif; */
+
 body {
   background-image: url("images/food_background.jpg");
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  font-family: "Gotu", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 1.5px;
 }
 /* Header */
 #verticalLine {
@@ -30,7 +30,7 @@ body {
   background-attachment: fixed;
   background-size: auto;
   height: 165px;
-  font-family: "Gotu", sans-serif;
+  font-family: "Montserrat", sans-serif;
   border: 1px solid slategray;
   border-radius: 2px;
 }
@@ -43,7 +43,7 @@ body {
   padding: 5px;
 }
 #headerText {
-  font-family: "Gotu", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 60px;
   text-align: center;
   margin: auto;
@@ -83,7 +83,7 @@ li,
 ul,
 label,
 h4 {
-  font-family: "Gotu", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 /* ------------- */
 /* Specials */
@@ -207,7 +207,7 @@ h4 {
   width: 200px;
   border: 1px solid black;
   border-radius: 5px;
-  font-family: "Gotu", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 #hiddenLink {
   position: fixed;
@@ -262,7 +262,7 @@ h4 {
   margin-left: 25px;
   border: 1px solid black;
   border-radius: 5px;
-  font-family: "Gotu", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 .removeBttn {
   background: unset;
@@ -271,7 +271,7 @@ h4 {
   margin-bottom: 30px;
   border: 1px solid black;
   border-radius: 100px;
-  font-family: "Gotu", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 .menuItem {
   font-size: 22px;
@@ -284,12 +284,12 @@ h4 {
   margin-bottom: 25px;
   border: 1px solid black;
   border-radius: 5px;
-  font-family: "Gotu", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 #total {
   width: 150px;
 
-  font-family: "Gotu", sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin-left: 15px;
   margin-right: 25px;
 }
@@ -329,7 +329,7 @@ h4 {
 }
 #alertBox h1 {
   margin: 0px;
-  font-family: "Gotu", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 22px;
   background-color: darkred;
   color: #fff;
@@ -359,7 +359,7 @@ h4 {
 }
 /* ------partners--------- */
 #font {
-  font-family: "Gotu", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 .partnersBackground {
   background-image: url("images/header.png");
