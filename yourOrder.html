@@ -71,9 +71,9 @@
           <li class="nav-item" id="navItem">
             <a class="nav-link" href="menu.html">Order Online</a>
           </li>
-          <li class="nav-item" id="navItem">
+          <!-- <li class="nav-item" id="navItem">
             <a class="nav-link" href="partnerships.html">Partnerships</a>
-          </li>
+          </li> -->
           <li class="nav-item" id="navItem">
             <a class="nav-link" href="contact.html">Contact Us</a>
           </li>
@@ -91,7 +91,7 @@
           <h2 id="menuTitle">Your Cart</h2>
           <hr />
           <div class="form-group" id="emailContainer">
-            <label for="exampleFormControlInput1">Address*</label>
+            <label for="exampleFormControlInput1">Delivery Address*</label>
             <textarea
               type="text"
               class="form-control"
@@ -99,9 +99,22 @@
               id="emailInput"
             ></textarea>
             <button id="addAddress">Add Address</button>
-            <h3>Delivery Address: <a id="email"></a></h3>
+            <h3 id="spacer">Delivery Address: <a id="email"></a></h3>
+            <hr>
+            <!-- ----------------------------------- -->
+            <label for="exampleFormControlInput1">Contact Number*</label>
+            <textarea
+              type="text"
+              class="form-control"
+              placeholder="555-555-1234"
+              id="contactInput"
+            ></textarea>
+            <button id="addContact">Add Contact</button>
+            <h3 id="spacer">Contact Number: <a id="contact"></a></h3>
+            <hr>
+
           </div>
-          <h3>Your Order:</h3>
+          <h3 id="spacer">Your Order:</h3>
           <div id="cart">
             <h4 class="boxCount1">Box 1: <span id="box1Count"></span></h4>
             <p class="menuItem">$<span id="item1" class="menuItem"></span></p>

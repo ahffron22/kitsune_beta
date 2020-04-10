@@ -85,6 +85,7 @@ $(document).ready(function () {
   var boxCount4 = "";
   var boxCount5 = "";
   var date = "";
+  var contact = "";
   var itemInput = $(".itemInput").text();
 
   $("#submitOrder").on("click", function (event) {
@@ -131,6 +132,15 @@ $(document).ready(function () {
     $("#email").text(sessionStorage.getItem("email"));
   });
   $("#email").text(sessionStorage.getItem("email"));
+  // ----------------------------------
+  $("#addContact").on("click", function (event) {
+    event.preventDefault();
+    contact = $("#contactInput").val().trim();
+    console.log(contact);
+    sessionStorage.setItem("contact", contact);
+    $("#contact").text(sessionStorage.getItem("contact"));
+  });
+  $("#contact").text(sessionStorage.getItem("contact"));
 
   // remove item buttons
   var empty = "";
