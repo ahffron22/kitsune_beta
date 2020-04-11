@@ -405,6 +405,11 @@ h4 {
     height: 100px;
     margin: 0px;
   }
+  .profileImage {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+  }
   #navItem {
     margin-right: -10px;
   }
