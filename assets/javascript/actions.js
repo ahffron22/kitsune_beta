@@ -78,7 +78,7 @@ $(document).ready(function () {
   );
   //   --------------------------------
   // Order center
-  var email = "";
+  var address = "";
   var boxCount1 = "";
   var boxCount2 = "";
   var boxCount3 = "";
@@ -90,7 +90,8 @@ $(document).ready(function () {
 
   $("#submitOrder").on("click", function (event) {
     event.preventDefault();
-    (email = $("#email").text()),
+    (address = $("#email").text()),
+      (contact = $("#contact").text()),
       (boxCount1 = $(".boxCount1").text()),
       (boxCount2 = $(".boxCount2").text()),
       (boxCount3 = $(".boxCount3").text()),
@@ -98,7 +99,8 @@ $(document).ready(function () {
       (boxCount5 = $(".boxCount5").text()),
       (date = Date());
     database.ref().push({
-      address: email,
+      address: address,
+      contact: contact,
       boxCount1: boxCount1,
       boxCount2: boxCount2,
       boxCount3: boxCount3,
@@ -113,12 +115,13 @@ $(document).ready(function () {
     var userMessage = $("<div>").append(
       $("<hr />"),
       $("<h3>").text(childSnapshot.val().address),
+      $("<h3>").text(childSnapshot.val().contact),
+      $("<h3>").text(childSnapshot.val().date),
       $("<p>").text(childSnapshot.val().boxCount1),
       $("<p>").text(childSnapshot.val().boxCount2),
       $("<p>").text(childSnapshot.val().boxCount3),
       $("<p>").text(childSnapshot.val().boxCount4),
-      $("<p>").text(childSnapshot.val().boxCount5),
-      $("<p>").text(childSnapshot.val().date)
+      $("<p>").text(childSnapshot.val().boxCount5)
     );
 
     $("#messageCenter").append(userMessage);
