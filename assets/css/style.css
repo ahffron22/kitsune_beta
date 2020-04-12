@@ -362,6 +362,13 @@ h4 {
   border-radius: 5px;
   text-decoration: none;
 }
+#sideItems {
+  font-family: "Montserrat", sans-serif;
+}
+#items {
+  float: left;
+  margin-right: 175px;
+}
 /* ------partners--------- */
 #font {
   font-family: "Montserrat", sans-serif;
