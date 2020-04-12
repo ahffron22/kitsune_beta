@@ -216,9 +216,9 @@ $(document).ready(function () {
   function reloadPage() {
     location.reload(true);
   }
-  var crys1 = 15.0;
-  var crys2 = 16.0;
-  var crys3 = 18.0;
+  var crys1 = 17.0;
+  var crys2 = 18.0;
+  var crys3 = 15.0;
   var crys4 = 20.0;
   var crys5 = 23.0;
   var crys6 = 14.0;
