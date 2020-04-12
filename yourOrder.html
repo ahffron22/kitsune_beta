@@ -92,6 +92,7 @@
           <hr />
           <div class="form-group" id="emailContainer">
             <label for="exampleFormControlInput1">Delivery Address*</label>
+            <p id="red">(Leave blank if order is for pick-up)</p>
             <textarea
               type="text"
               class="form-control"
@@ -102,15 +103,28 @@
             <h3 id="spacer">Delivery Address: <a id="email"></a></h3>
             <hr>
             <!-- ----------------------------------- -->
-            <label for="exampleFormControlInput1">Contact Number*</label>
+            <label for="exampleFormControlInput1">Delivery Date & Time*</label>
+            <p id="red">(Leave blank if wanted immediately)</p>
             <textarea
               type="text"
               class="form-control"
-              placeholder="555-555-1234"
+              placeholder="April, 1 3:00pm"
+              id="dateInput"
+            ></textarea>
+            <button id="addDate">Add Date</button>
+            <h3 id="spacer">Delivery Date & Time: <a id="date"></a></h3>
+            
+            <hr>
+            <!-- ----------------------------------- -->
+            <label for="exampleFormControlInput1">Contact Info*</label>
+            <textarea
+              type="text"
+              class="form-control"
+              placeholder="John Smith: 555-555-1234"
               id="contactInput"
             ></textarea>
             <button id="addContact">Add Contact</button>
-            <h3 id="spacer">Contact Number: <a id="contact"></a></h3>
+            <h3 id="spacer">Contact Name & Number: <a id="contact"></a></h3>
             <hr>
 
           </div>

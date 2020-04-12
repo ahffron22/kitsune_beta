@@ -92,6 +92,7 @@ $(document).ready(function () {
     event.preventDefault();
     (address = $("#email").text()),
       (contact = $("#contact").text()),
+      (deliveryDate = $("#date").text()),
       (boxCount1 = $(".boxCount1").text()),
       (boxCount2 = $(".boxCount2").text()),
       (boxCount3 = $(".boxCount3").text()),
@@ -107,6 +108,7 @@ $(document).ready(function () {
       boxCount4: boxCount4,
       boxCount5: boxCount5,
       date: date,
+      deliveryDate: deliveryDate,
     });
     console.log(date);
     alert("Order Submitted");
@@ -116,6 +118,7 @@ $(document).ready(function () {
       $("<hr />"),
       $("<h3>").text(childSnapshot.val().address),
       $("<h3>").text(childSnapshot.val().contact),
+      $("<h3>").text(childSnapshot.val().deliveryDate),
       $("<h3>").text(childSnapshot.val().date),
       $("<p>").text(childSnapshot.val().boxCount1),
       $("<p>").text(childSnapshot.val().boxCount2),
@@ -135,6 +138,16 @@ $(document).ready(function () {
     $("#email").text(sessionStorage.getItem("email"));
   });
   $("#email").text(sessionStorage.getItem("email"));
+  // -----------------------------------
+  var deliveryDate = "";
+  $("#addDate").on("click", function (event) {
+    event.preventDefault();
+    date = $("#dateInput").val().trim();
+    console.log(date);
+    sessionStorage.setItem("date", date);
+    $("#date").text(sessionStorage.getItem("date"));
+  });
+  $("#date").text(sessionStorage.getItem("date"));
   // ----------------------------------
   $("#addContact").on("click", function (event) {
     event.preventDefault();

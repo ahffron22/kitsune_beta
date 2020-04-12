@@ -282,7 +282,8 @@ h4 {
   font-size: 22px;
 }
 #addAddress,
-#addContact {
+#addContact,
+#addDate {
   background-color: lightgrey;
   width: 150px;
   margin-top: 15px;
@@ -302,7 +303,9 @@ h4 {
   text-align: center;
 }
 #email,
-#contact {
+#contact,
+#date,
+#red {
   color: crimson;
 }
 #spacer {
