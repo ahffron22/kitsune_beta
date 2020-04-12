@@ -365,7 +365,7 @@ h4 {
 #sideItems {
   font-family: "Montserrat", sans-serif;
 }
-#items {
+.items {
   float: left;
   margin-right: 175px;
 }
