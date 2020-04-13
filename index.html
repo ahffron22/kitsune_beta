@@ -44,12 +44,20 @@
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya:ital@1&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-    <div id="responsiveContainer">
+    <div class="container-fluid">
       <div id="headerContainer">
         <header id="mainHeader">
           <img src="assets/css/images/logo.jpg" id="logo" />
@@ -61,7 +69,7 @@
             <a class="nav-link active" href="index.html">Home</a>
           </li>
           <li class="nav-item" id="navItem">
-            <a class="nav-link" href="menu.html">Order Online</a>
+            <a class="nav-link" href="aboutUs.html">About us</a>
           </li>
           <!-- <li class="nav-item" id="navItem">
             <a class="nav-link" href="partnerships.html">Partnerships</a>
@@ -78,34 +86,8 @@
         </ul>
       </div>
       <header id="hr"></header>
-      <!-- <aside id="verticalLine"></aside> -->
-      <!-- Main Body  -->
-      <div id="bioBackground" class="col-sm-4 sectionBackground">
-        <div id="bio">
-          <h2 id="bioHeader">About Us:</h2>
-          <header id="hr"></header>
-          <p id="bioText">
-            Kitsune Bento is inspired by the Ekiben Bento cuisine, found at most
-            train stations throughout Japan. Ekiben Bento allows travelers and
-            commuters to purchase an affordable, portable meal that is seasonal,
-            regional, innovative and delicious. Kitsune (translating to Fox in
-            Japanese) was originally the guardian of agriculture, and love. It
-            is also known as a great messenger, mysterious, and swift. The
-            amount of tails on the fox represents its age and wisdom. At
-            Kitsune, We strive to create meals that are convenient, without
-            sacrificing taste, nutrition, or integrity. As a chef-driven
-            business, you can be assured all of our ingredients are sourced as
-            ethically and locally as possible. Our menu changes frequently in
-            conjunction with what is fresh and in season locally here in
-            Colorado, and we create our food using Japanese techniques and
-            American ingredients. Whether enjoyed at home, at the office, or
-            anywhere in between, we look forward to creating the most memorable
-            To-Go experience that you will never forget!
-          </p>
-          <img id="grandOpening" src="assets/css/images/grandOpening.jpg" />
-        </div>
-      </div>
-      <div class="sectionBackground col-sm-7">
+      <!-- Main Body -->
+      <div id="specialsBackground">
         <h2 id="specialsTitle">This Weeks Menu:</h2>
         <header id="hr"></header>
         <div class="media items">
@@ -124,10 +106,43 @@
           </ul>
         </div>
       </div>
-      <div class="mainFooter clearFix">
+      <div id="orderFormContainer">
+        <p id="orderInstructions">Click on a box to add it to your cart</p>
+        <div id="imageBox">
+          <h2 id="imageTitle">Box 1</h2>
+          <img class="crystal1 crys" src="assets/css/images/box1.jpg" />
+        </div>
+        <div id="imageBox">
+          <h2 id="imageTitle">Box 2</h2>
+          <img class="crystal2 crys" src="assets/css/images/box2.jpg" />
+        </div>
+        <div id="imageBox">
+          <h2 id="imageTitle">Box 3</h2>
+          <img class="crystal3 crys" src="assets/css/images/box3.jpg" />
+        </div>
+        <!-- <div id="imageBox">
+          <h2 id="imageTitle">Box 4</h2>
+          <img class="crystal4 crys" src="assets/css/images/box4.jpg" />
+        </div>
+        <div id="imageBox">
+          <h2 id="imageTitle">Box 5</h2>
+          <img
+            class="crystal5 crys"
+            src="assets/css/images/box5.jpg"
+            type="button"
+            onclick="alert('Item added to cart');"
+          />
+        </div> -->
+        <!-- <div id="imageBox">
+          <h2 id="imageTitle">Box 6</h2>
+          <img class="crystal6 crys" src="assets/css/images/background.jpg" />
+        </div> -->
+      </div>
+      <div class="mainFooter2 clearFix">
         <footer class="page-footer font-small blue">
           <div id="mainFooterText" class="footer-copyright text-center py-3">
             <p>Chef/Owner: Marcus Eng</p>
+
             <p>Chef/Director of Operations: Sam Soell</p>
             <p>
               Web Design by:
